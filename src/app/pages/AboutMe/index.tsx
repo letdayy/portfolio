@@ -1,12 +1,7 @@
 import styled from 'styled-components';
-import { ColorPurple } from '@/app/Global/style';
-import linkedin from '../../../img/linkedin.png';
+import { ColorPurple, Section } from '@/app/Global/style';
 
-const Section = styled.section`
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
-    height: 100vh;
-    width: 100%;
-`;
+
 
 const TextPrincipal = styled.div`
     width: 40%;
@@ -78,8 +73,8 @@ export default function AboutMe() {
         tecnologias relevantes para a área.
       </Description>
       <ImageContainer>
-        <img src="/linkedin.png" alt="linkedin" />
-        <img src="/github.png" alt="github" />
+        <a href=""><img src="/linkedin.png" alt="linkedin" /></a>
+        <a href=""><img src="/github.png" alt="github" /></a>
       </ImageContainer>
       </TextPrincipal>
       <ProfilePrincipal>
