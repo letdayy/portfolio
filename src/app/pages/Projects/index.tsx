@@ -6,6 +6,11 @@ const ContainerImage = styled.div`
   display: flex;
   justify-content: space-evenly;
   padding: 60px 0;
+
+  @media (max-width: 768px) {
+    flex-wrap: wrap;
+    padding: 0;
+  }
 `;
 
 const ProjectImage = styled.a`
@@ -16,6 +21,10 @@ const ProjectImage = styled.a`
     font-size: 18px;
     font-weight: 800;
     padding-top: 1rem;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 0 2rem 0;
   }
 `;
 

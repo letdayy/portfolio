@@ -24,6 +24,7 @@ const Logo = styled.a`
   width: 40%;
   padding-left: 1.5rem;
   font-family: "Lilita One", cursive;
+  font-size: 30px;
 
   @media (max-width: 768px) {
     width: 100%;
@@ -41,6 +42,7 @@ const MenuToggle = styled.div`
 
   @media (max-width: 768px) {
     display: block;
+    padding-right: 1rem;
   }
 `;
 

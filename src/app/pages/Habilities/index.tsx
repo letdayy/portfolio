@@ -17,6 +17,13 @@ const Containers = styled.div`
     display: flex;
     justify-content: space-evenly;
     padding-top: 40px;
+
+    @media (max-width: 768px) {
+    flex-direction: column;
+    align-items: center;
+    height: 700px;
+    padding-top: 0;
+  }
 `
 
 const Text = styled.p`
@@ -29,12 +36,20 @@ const TertiaryTitle = styled.p`
     font-size: 25px;
     font-weight: 800;
     padding: 110px 110px 40px 200px;
+
+    @media (max-width: 768px) {
+    display: none;
+}
 `
 
 const ContainerImage = styled.div`
     display: flex;
     justify-content: center;
     padding-bottom: 100px;
+
+    @media (max-width: 768px) {
+    display: none;
+  }
 `
 
 
