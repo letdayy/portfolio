@@ -3,6 +3,7 @@ import { ColorPurple, Section } from "@/app/Global/style";
 import React, { useState, useEffect } from "react";
 import { useDarkMode } from "@/services/DarkModeContext";
 import ButtonDarkMode from "@/components/ButtonDarkMode";
+import SocialIcons from "@/components/SocialIcons";
 
 interface MyTheme extends DefaultTheme {
   isDarkMode: boolean;
@@ -52,14 +53,6 @@ const TitleSecondary = styled.h2`
   @media (max-width: 768px) {
     font-size: 20px;
   }
-`;
-
-const ImageContainer = styled.div`
-  width: 65%;
-  display: flex;
-  justify-content: center;
-  margin-top: 40px;
-  gap: 40px;
 `;
 
 const ProfilePrincipal = styled.div`
@@ -123,14 +116,7 @@ export default function AboutMe() {
           ajudando alunos a ingressarem no mercado de trabalho e busco
           constantemente estudar novas tecnologias relevantes para a área.
         </Description>
-        <ImageContainer>
-          <a href="">
-            <img src="/linkedin.png" alt="linkedin" />
-          </a>
-          <a href="">
-            <img src="/github.png" alt="github" />
-          </a>
-        </ImageContainer>
+        <SocialIcons />
       </TextPrincipal>
       <ProfilePrincipal>
         <ImageProfile src="/profile.png" alt="profile" />
