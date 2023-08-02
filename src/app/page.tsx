@@ -6,6 +6,7 @@ import AboutMe from './pages/AboutMe';
 import Extra from './pages/Extra';
 import Habilities from './pages/Habilities';
 import Projects from './pages/Projects';
+import Menu from '../components/Menu';
 
 export default function Home() {
   return (

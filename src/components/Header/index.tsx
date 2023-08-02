@@ -44,7 +44,13 @@ const Button = styled.button`
     cursor: pointer;
 `
 
-
+export const MobileStyles = styled.div`
+  @media (max-width: 768px) {
+    ${HeaderComponent} {
+      
+    }
+  }
+`;
 
 export default function Header() {
     return (
