@@ -13,17 +13,29 @@ const TextPrincipal = styled.div`
   gap: 40px;
   float: left;
   padding-left: 10%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 const Description = styled.p`
   width: 70%;
   text-align: justify;
   font-size: 14px;
+
+  @media (max-width: 768px) {
+    width: 80%;
+  }
 `;
 
 const TitleSecondary = styled.h2`
   font-weight: 1000;
   font-size: 30px;
   font-family: "Montserrat", sans-serif;
+
+  @media (max-width: 768px) {
+    font-size: 20px;
+  }
 `;
 
 const ImageContainer = styled.div`
@@ -51,22 +63,10 @@ const ImageProfile = styled.img`
   border-radius: 389px;
   background: #fff;
   box-shadow: 0px 4px 4px 0px #9753e3 inset;
-`;
 
-export const MobileStyles = styled.div`
   @media (max-width: 768px) {
-    ${TextPrincipal} {
-      width: 100%;
-    }
-
-    ${ImageProfile} {
-      display: none;
-    }
-    ${TitleSecondary} {
-      font-size: 20px;
-    
+    display: none;
   }
-}
 `;
 
 export default function AboutMe() {
@@ -82,7 +82,6 @@ export default function AboutMe() {
 
   return (
     <Section>
-      <MobileStyles>
       <TextPrincipal>
         <h4>Olá, me chamo Letícia Dayane</h4>
         <TitleSecondary>
@@ -116,7 +115,6 @@ export default function AboutMe() {
       <ProfilePrincipal>
         <ImageProfile src="/profile.png" alt="profile" />
       </ProfilePrincipal>
-      </MobileStyles>
     </Section>
   );
 }

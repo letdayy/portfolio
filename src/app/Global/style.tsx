@@ -2,6 +2,7 @@ import { styled } from "styled-components";
 
 export const ColorPurple = styled.span`
   color: #9468d2;
+  font-weight: 800;
 `;
 
 export const Section = styled.section`
