@@ -81,7 +81,7 @@ export default function AboutMe() {
   }, []);
 
   return (
-    <Section>
+    <Section id="about-me">
       <TextPrincipal>
         <h4>Olá, me chamo Letícia Dayane</h4>
         <TitleSecondary>

@@ -30,7 +30,7 @@ const ProjectImage = styled.a`
 
 export default function Projects() {
   return (
-    <Section>
+    <Section id="projects">
       <Title>Projetos</Title>
       <Description>
         Logo abaixo você pode visualizar alguns dos projetos e clicando no link

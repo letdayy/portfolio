@@ -55,7 +55,7 @@ const ContainerImage = styled.div`
 
 export default function Habilities() {
   return (
-    <Section>
+    <Section id='habilities'>
         <Title>
             Habilidades
         </Title>

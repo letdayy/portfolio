@@ -150,22 +150,22 @@ export default function Menu() {
       <MenuList isMenuOpen={isMenuOpen}>
         <Itens>
           <MenuItem>
-            <Link href="">
+            <Link href="#about-me">
               <MenuLink>Sobre mim</MenuLink>
             </Link>
           </MenuItem>
           <MenuItem>
-            <Link href="">
+            <Link href="#habilities">
               <MenuLink>Habilidades</MenuLink>
             </Link>
           </MenuItem>
           <MenuItem>
-            <Link href="">
+            <Link href="#projects">
               <MenuLink>Projetos</MenuLink>
             </Link>
           </MenuItem>
         </Itens>
-        <Button>Saiba mais</Button>
+        <a href="#extra"><Button>Saiba mais</Button></a>
       </MenuList>
     </Nav>
   );

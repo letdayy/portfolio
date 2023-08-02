@@ -1,7 +1,7 @@
 "use client"
 
 import Footer from '@/components/Footer';
-import Header from '../components/Header';
+import Header from '../components/Teste';
 import AboutMe from './pages/AboutMe';
 import Extra from './pages/Extra';
 import Habilities from './pages/Habilities';

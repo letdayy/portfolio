@@ -34,7 +34,7 @@ export const ContainerImage = styled.div`
 
 export default function Extra() {
   return (
-    <Section>
+    <Section id='extra'>
       <Title>Saiba mais</Title>
       <Description>
         Aqui você vai encontrar um pouco mais sobre mim :) Eu gosto sempre de

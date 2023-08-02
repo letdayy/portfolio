@@ -33,6 +33,7 @@ body {
   list-style: none;
   text-decoration: none;
   overflow-x: hidden;
+  scroll-behavior: smooth;
 }
 
 
