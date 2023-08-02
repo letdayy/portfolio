@@ -1,17 +1,30 @@
 import React, { useState } from "react";
 import Link from "next/link";
-import styled from "styled-components";
+import styled, { DefaultTheme, ThemeProvider } from "styled-components";
 import { ColorPurple } from "@/app/Global/style";
+import { useDarkMode } from "@/services/DarkModeContext";
+
+interface MyTheme extends DefaultTheme {
+  isDarkMode: boolean;
+}
+
+const lightTheme: MyTheme = {
+  isDarkMode: false
+};
+
+const darkTheme: MyTheme = {
+  isDarkMode: true
+};
 
 const Nav = styled.nav`
-  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  box-shadow: 0px 4px 4px 0px ${({ theme }) => (theme.isDarkMode ? "#1E1E1E" : "#0000003f")} inset ;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 100px;
+  background-color: ${({ theme }) => (theme.isDarkMode ? "#000000" : "#ffffff")};
 
   @media (max-width: 768px) {
-    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     padding: 10px;
     display: flex;
     justify-content: space-between;
@@ -25,10 +38,10 @@ const Logo = styled.a`
   padding-left: 1.5rem;
   font-family: "Lilita One", cursive;
   font-size: 30px;
+  color: ${({ theme }) => (theme.isDarkMode ? "#ffffff" : "#000000")};
 
   @media (max-width: 768px) {
     width: 100%;
-    color: black;
     font-size: 24px;
     font-weight: bold;
     text-decoration: none;
@@ -50,10 +63,10 @@ const MenuList = styled.ul<{ isMenuOpen: boolean }>`
   display: flex;
   width: 80%;
   align-items: center;
+  background-color: ${({ theme }) => (theme.isDarkMode ? "#000000" : "#ffffff")};
 
   @media (max-width: 768px) {
     display: ${({ isMenuOpen }) => (isMenuOpen ? "flex" : "none")};
-    background-color: #ffffff;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     flex-direction: column;
     position: absolute;
@@ -76,8 +89,9 @@ const MenuItem = styled.li`
 `;
 
 const MenuLink = styled.a`
-  background-color: white;
-  color: #9a9a9a;
+  color: 
+  ${({ theme }) => (theme.isDarkMode ? "#BCBCBC" : "#9a9a9a")};
+  
 
   &:hover {
     text-decoration: underline;
@@ -105,12 +119,14 @@ const Button = styled.button`
   height: 48px;
   flex-shrink: 0;
   border-radius: 20px;
-  background: #9753e3;
+  background: 
+  ${({ theme }) => (theme.isDarkMode ? "#FF6DF0" : "#9753e3")};
   border: none;
-  color: white;
+  color: ${({ theme }) => (theme.isDarkMode ? "#000000" : "#ffffff")};
   font-size: 15px;
   cursor: pointer;
   margin-right: 4rem;
+  font-weight: 600;
 
   @media (max-width: 768px) {
     margin: 1rem;
@@ -119,24 +135,30 @@ const Button = styled.button`
   }
 `;
 
+const ToggleSvg = styled.svg`
+  fill: ${({ theme }) => (theme.isDarkMode ? "#ffffff" : "#000000")};
+`;
+
 export default function Menu() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
+  const theme = isDarkMode ? darkTheme : lightTheme;
 
   const handleMenuToggle = () => {
     setIsMenuOpen(!isMenuOpen);
   };
 
   return (
+    <ThemeProvider theme={theme}>
     <Nav>
       <Logo href="/">
         Letícia <ColorPurple>Dayane</ColorPurple>
       </Logo>
       <MenuToggle onClick={handleMenuToggle}>
-        <svg
+        <ToggleSvg
           xmlns="http://www.w3.org/2000/svg"
           width="24"
           height="24"
-          fill="black"
           viewBox="0 0 24 24"
         >
           {isMenuOpen ? (
@@ -145,7 +167,7 @@ export default function Menu() {
             <path d="M0 0h24v24H0V0z" fill="none" />
           )}
           <path d="M3 18h18v-2H3v2zM3 6v2h18V6H3z" />
-        </svg>
+        </ToggleSvg>
       </MenuToggle>
       <MenuList isMenuOpen={isMenuOpen}>
         <Itens>
@@ -168,5 +190,6 @@ export default function Menu() {
         <a href="#extra"><Button>Saiba mais</Button></a>
       </MenuList>
     </Nav>
+    </ThemeProvider>
   );
 }

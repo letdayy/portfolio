@@ -1,5 +1,19 @@
-import styled from "styled-components";
+import styled, { DefaultTheme, ThemeProvider } from "styled-components";
 import { Section, Title, Description, ColorPurple } from "@/app/Global/style";
+import { useDarkMode } from "@/services/DarkModeContext";
+
+interface MyTheme extends DefaultTheme {
+  isDarkMode: boolean;
+}
+
+const lightTheme: MyTheme = {
+  isDarkMode: false
+};
+
+// Defina o tema escuro
+const darkTheme: MyTheme = {
+  isDarkMode: true
+};
 
 export const ContainerImage = styled.div`
   display: flex;
@@ -33,7 +47,12 @@ export const ContainerImage = styled.div`
 `;
 
 export default function Extra() {
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
+  const theme = isDarkMode ? darkTheme : lightTheme;
+
   return (
+    
+    <ThemeProvider theme={theme}>
     <Section id='extra'>
       <Title>Saiba mais</Title>
       <Description>
@@ -100,5 +119,6 @@ export default function Extra() {
         <img src="/jujutsu-kaisen.png" alt="" />
       </ContainerImage>
     </Section>
+    </ThemeProvider>
   );
 }

@@ -1,6 +1,20 @@
-import styled from "styled-components";
+import styled, { DefaultTheme, ThemeProvider } from "styled-components";
 import { ColorPurple, Section } from "@/app/Global/style";
 import React, { useState, useEffect } from "react";
+import { useDarkMode } from "@/services/DarkModeContext";
+import ButtonDarkMode from "@/components/ButtonDarkMode";
+
+interface MyTheme extends DefaultTheme {
+  isDarkMode: boolean;
+}
+
+const lightTheme: MyTheme = {
+  isDarkMode: false
+};
+
+const darkTheme: MyTheme = {
+  isDarkMode: true
+};
 
 const words = ["Front end", "Full Stack"];
 
@@ -22,6 +36,7 @@ const Description = styled.p`
   width: 70%;
   text-align: justify;
   font-size: 14px;
+  color: ${({ theme }) => (theme.isDarkMode ? "#ffffff" : "#000000")};
 
   @media (max-width: 768px) {
     width: 80%;
@@ -32,6 +47,7 @@ const TitleSecondary = styled.h2`
   font-weight: 1000;
   font-size: 30px;
   font-family: "Montserrat", sans-serif;
+  color: ${({ theme }) => (theme.isDarkMode ? "#ffffff" : "#000000")};
 
   @media (max-width: 768px) {
     font-size: 20px;
@@ -62,7 +78,7 @@ const ProfilePrincipal = styled.div`
 const ImageProfile = styled.img`
   border-radius: 389px;
   background: #fff;
-  box-shadow: 0px 4px 4px 0px #9753e3 inset;
+  box-shadow: 0px 4px 4px 0px ${({ theme }) => (theme.isDarkMode ? "#e87cea" : "#9753e3")} inset;
 
   @media (max-width: 768px) {
     display: none;
@@ -71,6 +87,8 @@ const ImageProfile = styled.img`
 
 export default function AboutMe() {
   const [currentWordIndex, setCurrentWordIndex] = useState(0);
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
+  const theme = isDarkMode ? darkTheme : lightTheme;
 
   useEffect(() => {
     const intervalId = setInterval(() => {
@@ -81,7 +99,9 @@ export default function AboutMe() {
   }, []);
 
   return (
+    <ThemeProvider theme={theme}>
     <Section id="about-me">
+    <ButtonDarkMode />
       <TextPrincipal>
         <h4>Olá, me chamo Letícia Dayane</h4>
         <TitleSecondary>
@@ -116,5 +136,6 @@ export default function AboutMe() {
         <ImageProfile src="/profile.png" alt="profile" />
       </ProfilePrincipal>
     </Section>
+    </ThemeProvider>
   );
 }

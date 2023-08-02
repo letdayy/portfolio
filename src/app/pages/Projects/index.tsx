@@ -1,6 +1,19 @@
-import styled from "styled-components";
+import styled, { ThemeProvider, DefaultTheme } from "styled-components";
 import { Section, Title, Description } from "@/app/Global/style";
+import { useDarkMode } from "@/services/DarkModeContext";
 
+
+interface MyTheme extends DefaultTheme {
+  isDarkMode: boolean;
+}
+
+const lightTheme: MyTheme = {
+  isDarkMode: false
+};
+
+const darkTheme: MyTheme = {
+  isDarkMode: true
+};
 
 const ContainerImage = styled.div`
   display: flex;
@@ -17,7 +30,7 @@ const ProjectImage = styled.a`
   text-align: center;
 
   p {
-    color: #565656;
+    color: ${({ theme }) => (theme.isDarkMode ? "#BCBCBC" : "#565656")};
     font-size: 18px;
     font-weight: 800;
     padding-top: 1rem;
@@ -29,7 +42,11 @@ const ProjectImage = styled.a`
 `;
 
 export default function Projects() {
+  const { isDarkMode, toggleDarkMode } = useDarkMode();
+  const theme = isDarkMode ? darkTheme : lightTheme;
+
   return (
+    <ThemeProvider theme={theme}>
     <Section id="projects">
       <Title>Projetos</Title>
       <Description>
@@ -67,5 +84,6 @@ export default function Projects() {
         </ProjectImage>
       </ContainerImage>
     </Section>
+    </ThemeProvider>
   );
 }
