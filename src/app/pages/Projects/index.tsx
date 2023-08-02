@@ -1,17 +1,11 @@
 import styled from "styled-components";
-import { Section, Title } from "@/app/Global/style";
+import { Section, Title, Description } from "@/app/Global/style";
 
-const Description = styled.p`
-  padding: 0 0 0 90px;
-  width: 35%;
-  text-align: justify;
-  color: #7A7A7A;
-`;
 
 const ContainerImage = styled.div`
   display: flex;
   justify-content: space-evenly;
-  padding: 90px 0;
+  padding: 60px 0;
 `;
 
 const ProjectImage = styled.a`

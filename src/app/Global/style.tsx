@@ -14,3 +14,10 @@ export const Title = styled.h2`
     padding: 90px 0 20px 90px;
     font-size: 30px;
 `
+
+export const Description = styled.p`
+  padding: 0 0 30px 90px;
+  width: 35%;
+  text-align: justify;
+  color: #7A7A7A;
+`;

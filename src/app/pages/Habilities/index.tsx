@@ -10,6 +10,7 @@ const ContainerHabilities = styled.div`
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    border-radius: 10px;
 `
 
 const Containers = styled.div`

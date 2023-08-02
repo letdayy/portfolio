@@ -1,7 +1,8 @@
 import styled from 'styled-components';
 import { ColorPurple, Section } from '@/app/Global/style';
+import React, { useState, useEffect } from 'react';
 
-
+const words = ['Front end', 'Full Stack'];
 
 const TextPrincipal = styled.div`
     width: 40%;
@@ -12,7 +13,6 @@ const TextPrincipal = styled.div`
     gap: 40px;
     float: left;
     padding-left: 10%;
-    /* padding: 0 60px; */
 `
 const Description = styled.p`
     width: 70%;
@@ -50,12 +50,22 @@ const ImageProfile = styled.img`
 `
 
 export default function AboutMe() {
+    const [currentWordIndex, setCurrentWordIndex] = useState(0);
+
+  useEffect(() => {
+    const intervalId = setInterval(() => {
+      setCurrentWordIndex((prevIndex) => (prevIndex + 1) % words.length);
+    }, 2000);
+
+    return () => clearInterval(intervalId);
+  }, []);
+
   return (
     <Section>
         <TextPrincipal>
       <h4>Olá, me chamo Letícia Dayane</h4>
       <TitleSecondary>
-        Sou Desenvolvedora <ColorPurple>Front end</ColorPurple>
+        Sou Desenvolvedora <ColorPurple>{words[currentWordIndex]}</ColorPurple>
       </TitleSecondary>
       <Description>
         Sou uma estudante de programação e atualmente estou cursando o segundo
