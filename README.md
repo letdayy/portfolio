@@ -1,34 +1,53 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Portfolio - Letícia Dayane
+Este é o repositório do meu projeto pessoal de portfolio desenvolvido com React, Next.js, TypeScript e Styled Components. Aqui você encontrará informações sobre mim, minhas habilidades, projetos principais e alguns detalhes sobre meus interesses pessoais.
 
-## Getting Started
+<img src="./.github/portfolio.png">
+<img src="./.github/portfolio-dark.png">
 
-First, run the development server:
+## Visão Geral
+Este projeto foi criado com o objetivo de apresentar minha trajetória profissional, destacar minhas habilidades técnicas e exibir alguns dos projetos nos quais trabalhei. Além disso, o tema do site pode ser alternado entre claro e escuro para atender às preferências de visualização do usuário.
+
+## Tecnologias Utilizadas
+React
+Next.js
+TypeScript
+Styled Components
+Instruções de Execução
+
+## Para executar o projeto localmente, siga as etapas abaixo:
+
+Clone o repositório para o seu ambiente local.
+
+Navegue até o diretório do projeto.
+
+Instale as dependências usando o gerenciador de pacotes de sua preferência (npm ou yarn).
+
+```bash
+npm install
+```
+
+Inicie o servidor de desenvolvimento.
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Abra o navegador e acesse http://localhost:3000 para visualizar o portfolio.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Menu
+O menu de navegação contém os seguintes itens:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+<p>Sobre Mim: Uma breve descrição sobre minha história profissional e paixão pelo desenvolvimento web.
+Habilidades: Lista das habilidades técnicas que possuo, com um indicador visual de meu nível de domínio em cada uma.
+</p><p>Projetos: Exibição dos projetos principais nos quais trabalhei, com detalhes sobre cada projeto e links para acessá-los.
+</p><p>Saiba Mais: Nesta seção, compartilho alguns detalhes sobre meus interesses pessoais e conteúdos que curto.
+</p><p>Tema Claro e Escuro
+</p><p>O portfolio oferece a opção de escolher entre os temas claro e escuro. O botão de alternância pode ser encontrado no canto superior direito do site. Ao clicar nele, o tema será alterado para o modo correspondente.
+</p>
 
-## Learn More
+## Letra "Front End" e "Full Stack"
+A página inicial do site possui um efeito interessante em que a frase "Front End" e "Full Stack" são alternadas periodicamente, representando minhas habilidades nessas áreas.
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## Licença
+Este projeto está licenciado sob a MIT License - veja o arquivo LICENSE.md para mais detalhes.
