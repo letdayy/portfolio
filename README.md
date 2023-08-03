@@ -1,6 +1,8 @@
 # Portfolio - Letícia Dayane
 Este é o repositório do meu projeto pessoal de portfolio desenvolvido com React, Next.js, TypeScript e Styled Components. Aqui você encontrará informações sobre mim, minhas habilidades, projetos principais e alguns detalhes sobre meus interesses pessoais.
-
+<br><br>
+Acesse pelo link: https://kaleidoscopic-basbousa-fcf2bc.netlify.app
+<br>
 <img src="./.github/portfolio.png">
 <img src="./.github/portfolio-dark.png">
 
@@ -8,10 +10,10 @@ Este é o repositório do meu projeto pessoal de portfolio desenvolvido com Reac
 Este projeto foi criado com o objetivo de apresentar minha trajetória profissional, destacar minhas habilidades técnicas e exibir alguns dos projetos nos quais trabalhei. Além disso, o tema do site pode ser alternado entre claro e escuro para atender às preferências de visualização do usuário.
 
 ## Tecnologias Utilizadas
-React
-Next.js
-TypeScript
-Styled Components
+React<br>
+Next.js<br>
+TypeScript<br>
+Styled Components<br>
 Instruções de Execução
 
 ## Para executar o projeto localmente, siga as etapas abaixo:
