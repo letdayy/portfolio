@@ -55,30 +55,30 @@ export default function Projects() {
         contém o link para visualizar o código funcionando na web.
       </Description>
       <ContainerImage>
-        <ProjectImage href="">
+        <ProjectImage href="https://gerador-de-senha-neon.vercel.app">
           <img src="/gerador-senha.png" alt="" />
           <p>Gerador de Senha</p>
         </ProjectImage>
-        <ProjectImage href="">
+        <ProjectImage href="https://mensagem-oculta.vercel.app">
           <img src="/crypto-potter.png" alt="" />
           <p>Crypto Potter</p>
         </ProjectImage>
-        <ProjectImage href="">
+        <ProjectImage href="https://habit-tracker-bay.vercel.app">
           <img src="habit-tracker.png" alt="" />
           <p>Habit Tracker</p>
         </ProjectImage>
       </ContainerImage>
 
       <ContainerImage>
-        <ProjectImage href="">
+        <ProjectImage href="https://github.com/letdayy/Outfit-E-commerce">
           <img src="/outfit-e-commerce.png" alt="" />
           <p>OutFit E-commerce</p>
         </ProjectImage>
-        <ProjectImage href="">
+        <ProjectImage href="https://github.com/letdayy/banco-digital">
           <img src="/banco-digital.png" alt="" />
           <p>Banco Digital</p>
         </ProjectImage>
-        <ProjectImage href="">
+        <ProjectImage href="https://cute-entremet-b35467.netlify.app">
           <img src="/pokedex.png" alt="" />
           <p>Pokedex</p>
         </ProjectImage>
