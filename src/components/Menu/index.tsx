@@ -35,7 +35,7 @@ const Nav = styled.nav`
 `;
 
 const Logo = styled.a`
-  width: 30%;
+  width: 20%;
   padding-left: 1.5rem;
   font-family: "Lilita One", cursive;
   font-size: 30px;
@@ -62,7 +62,7 @@ const MenuToggle = styled.div`
 
 const MenuList = styled.ul<{ isMenuOpen: boolean }>`
   display: flex;
-  width: 100%;
+  width: 90%;
   align-items: center;
   background-color: ${({ theme }) => (theme.isDarkMode ? "#000000" : "#ffffff")};
  
@@ -82,6 +82,7 @@ const MenuList = styled.ul<{ isMenuOpen: boolean }>`
 const MenuItem = styled.li`
   padding: 0 90px;
 
+
   @media (max-width: 768px) {
     margin: 0 10px;
     margin: 5px 0;
@@ -89,6 +90,7 @@ const MenuItem = styled.li`
     padding: 0;
   }
 `;
+
 
 const MenuLink = styled.a`
   color: 
