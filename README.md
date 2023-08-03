@@ -14,9 +14,11 @@ React<br>
 Next.js<br>
 TypeScript<br>
 Styled Components<br>
-Instruções de Execução
 
-## Para executar o projeto localmente, siga as etapas abaixo:
+
+## Instruções de Execução
+
+Para executar o projeto localmente, siga as etapas abaixo:
 
 Clone o repositório para o seu ambiente local.
 
