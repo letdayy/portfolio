@@ -2,7 +2,6 @@ import styled, { DefaultTheme, ThemeProvider } from "styled-components";
 import { ColorPurple, Section } from "@/app/Global/style";
 import React, { useState, useEffect } from "react";
 import { useDarkMode } from "@/services/DarkModeContext";
-import ButtonDarkMode from "@/components/ButtonDarkMode";
 import SocialIcons from "@/components/SocialIcons";
 
 interface MyTheme extends DefaultTheme {
@@ -94,9 +93,6 @@ export default function AboutMe() {
   return (
     <ThemeProvider theme={theme}>
     <Section id="about-me">
-    <ButtonDarkMode handleToggleImage={function (): void {
-          throw new Error("Function not implemented.");
-        } } />
       <TextPrincipal>
         <h4>Olá, me chamo Letícia Dayane</h4>
         <TitleSecondary>

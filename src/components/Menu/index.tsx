@@ -3,6 +3,7 @@ import Link from "next/link";
 import styled, { DefaultTheme, ThemeProvider } from "styled-components";
 import { ColorPurple } from "@/app/Global/style";
 import { useDarkMode } from "@/services/DarkModeContext";
+import ButtonDarkMode from "../ButtonDarkMode";
 
 interface MyTheme extends DefaultTheme {
   isDarkMode: boolean;
@@ -34,7 +35,7 @@ const Nav = styled.nav`
 `;
 
 const Logo = styled.a`
-  width: 40%;
+  width: 30%;
   padding-left: 1.5rem;
   font-family: "Lilita One", cursive;
   font-size: 30px;
@@ -61,9 +62,10 @@ const MenuToggle = styled.div`
 
 const MenuList = styled.ul<{ isMenuOpen: boolean }>`
   display: flex;
-  width: 80%;
+  width: 100%;
   align-items: center;
   background-color: ${({ theme }) => (theme.isDarkMode ? "#000000" : "#ffffff")};
+ 
 
   @media (max-width: 768px) {
     display: ${({ isMenuOpen }) => (isMenuOpen ? "flex" : "none")};
@@ -111,27 +113,6 @@ const Itens = styled.div`
     display: block;
     justify-content: baseline;
     width: 100%;
-  }
-`;
-
-const Button = styled.button`
-  width: 119px;
-  height: 48px;
-  flex-shrink: 0;
-  border-radius: 20px;
-  background: 
-  ${({ theme }) => (theme.isDarkMode ? "#FF6DF0" : "#9753e3")};
-  border: none;
-  color: ${({ theme }) => (theme.isDarkMode ? "#000000" : "#ffffff")};
-  font-size: 15px;
-  cursor: pointer;
-  margin-right: 4rem;
-  font-weight: 600;
-
-  @media (max-width: 768px) {
-    margin: 1rem;
-    width: 100px;
-    font-size: 12px;
   }
 `;
 
@@ -186,8 +167,15 @@ export default function Menu() {
               <MenuLink>Projetos</MenuLink>
             </Link>
           </MenuItem>
+          <MenuItem>
+            <Link href="#extra">
+              <MenuLink>Saiba mais</MenuLink>
+            </Link>
+          </MenuItem>
         </Itens>
-        <a href="#extra"><Button>Saiba mais</Button></a>
+        <ButtonDarkMode handleToggleImage={function (): void {
+            throw new Error("Function not implemented.");
+          } } />
       </MenuList>
     </Nav>
     </ThemeProvider>
