@@ -14,25 +14,23 @@ const darkTheme: MyTheme = {
   isDarkMode: true,
 };
 
-const ImageContainer = styled.div`
-  width: 65%;
+const ContainerImage = styled.div`
   display: flex;
   justify-content: center;
-  margin-top: 40px;
-  gap: 40px;
+  padding-bottom: 100px;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
 `;
 
-const linkedinImages = [
-  "/linkedin-black.png",
-  "/linkedin-white.png",
+const habilitiesImages = [
+  "/habilities-purple.png",
+  "/habilities-pink.png",
 ];
 
-const githubImages = [
-  "/github-black.png",
-  "/github-white.png",
-];
 
-export default function SocialIcons() {
+export default function HabilitiesImage() {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
   const theme = isDarkMode ? darkTheme : lightTheme;
 
@@ -46,21 +44,14 @@ export default function SocialIcons() {
   }, [isDarkMode]);
 
   const handleImageToggle = () => {
-    setCurrentImage((prevImage) => (prevImage === linkedinImages.length - 1 ? 0 : prevImage + 1));
-    setCurrentGithubImage((prevImage) => (prevImage === githubImages.length - 1 ? 0 : prevImage + 1));
+    setCurrentImage((prevImage) => (prevImage === habilitiesImages.length - 1 ? 0 : prevImage + 1));
   };
 
   return (
     <ThemeProvider theme={theme}>
-      <ImageContainer>
-        <a href="">
-          <img src={linkedinImages[currentImage]} alt="linkedin" />
-        </a>
-        <a href="">
-          <img src={githubImages[currentGithubImage]} alt="github" />
-        </a>
-      </ImageContainer>
+      <ContainerImage>
+          <img src={habilitiesImages[currentImage] } />
+        </ContainerImage>
     </ThemeProvider>
   );
 }
-

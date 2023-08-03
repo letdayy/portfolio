@@ -94,7 +94,9 @@ export default function AboutMe() {
   return (
     <ThemeProvider theme={theme}>
     <Section id="about-me">
-    <ButtonDarkMode />
+    <ButtonDarkMode handleToggleImage={function (): void {
+          throw new Error("Function not implemented.");
+        } } />
       <TextPrincipal>
         <h4>Olá, me chamo Letícia Dayane</h4>
         <TitleSecondary>

@@ -1,6 +1,7 @@
 import styled, { DefaultTheme, ThemeProvider } from "styled-components";
 import { Section, Title } from "@/app/Global/style";
 import { useDarkMode } from "@/services/DarkModeContext";
+import HabilitiesImage from "@/components/HabilitiesImage";
 
 interface MyTheme extends DefaultTheme {
     isDarkMode: boolean;
@@ -67,15 +68,7 @@ const TertiaryTitle = styled.p`
   }
 `;
 
-const ContainerImage = styled.div`
-  display: flex;
-  justify-content: center;
-  padding-bottom: 100px;
 
-  @media (max-width: 768px) {
-    display: none;
-  }
-`;
 
 export default function Habilities() {
   const { isDarkMode, toggleDarkMode } = useDarkMode();
@@ -101,9 +94,7 @@ export default function Habilities() {
           </ContainerHabilities>
         </Containers>
         <TertiaryTitle>Nível de Domínio</TertiaryTitle>
-        <ContainerImage>
-          <img src="/habilities.png" />
-        </ContainerImage>
+        <HabilitiesImage />
       </Section>
     </ThemeProvider>
   );
