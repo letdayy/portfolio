@@ -53,10 +53,10 @@ export default function SocialIcons() {
   return (
     <ThemeProvider theme={theme}>
       <ImageContainer>
-        <a href="https://www.linkedin.com/in/letdayy/">
+        <a href="https://www.linkedin.com/in/letdayy/" target="_blank">
           <img src={linkedinImages[currentImage]} alt="linkedin" />
         </a>
-        <a href="https://github.com/letdayy">
+        <a href="https://github.com/letdayy" target="_blank">
           <img src={githubImages[currentGithubImage]} alt="github" />
         </a>
       </ImageContainer>

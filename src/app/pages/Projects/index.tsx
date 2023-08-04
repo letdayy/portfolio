@@ -55,30 +55,30 @@ export default function Projects() {
         contém o link para visualizar o código funcionando na web.
       </Description>
       <ContainerImage>
-        <ProjectImage href="https://gerador-de-senha-neon.vercel.app">
+        <ProjectImage href="https://gerador-de-senha-neon.vercel.app" target="_blank">
           <img src="/gerador-senha.png" alt="" />
           <p>Gerador de Senha</p>
         </ProjectImage>
-        <ProjectImage href="https://mensagem-oculta.vercel.app">
+        <ProjectImage href="https://mensagem-oculta.vercel.app" target="_blank">
           <img src="/crypto-potter.png" alt="" />
           <p>Crypto Potter</p>
         </ProjectImage>
-        <ProjectImage href="https://habit-tracker-bay.vercel.app">
+        <ProjectImage href="https://habit-tracker-bay.vercel.app" target="_blank">
           <img src="habit-tracker.png" alt="" />
           <p>Habit Tracker</p>
         </ProjectImage>
       </ContainerImage>
 
       <ContainerImage>
-        <ProjectImage href="https://github.com/letdayy/Outfit-E-commerce">
+        <ProjectImage href="https://github.com/letdayy/Outfit-E-commerce" target="_blank">
           <img src="/outfit-e-commerce.png" alt="" />
           <p>OutFit E-commerce</p>
         </ProjectImage>
-        <ProjectImage href="https://github.com/letdayy/banco-digital">
+        <ProjectImage href="https://github.com/letdayy/banco-digital" target="_blank">
           <img src="/banco-digital.png" alt="" />
           <p>Banco Digital</p>
         </ProjectImage>
-        <ProjectImage href="https://cute-entremet-b35467.netlify.app">
+        <ProjectImage href="https://cute-entremet-b35467.netlify.app" target="_blank">
           <img src="/pokedex.png" alt="" />
           <p>Pokedex</p>
         </ProjectImage>
