@@ -16,7 +16,7 @@ const darkTheme: MyTheme = {
   isDarkMode: true
 };
 
-const words = ["Front end", "Full Stack"];
+const words = ["Front end", "Full Stack", "iOS"];
 
 const TextPrincipal = styled.div`
   width: 40%;
@@ -100,19 +100,14 @@ export default function AboutMe() {
           <ColorPurple>{words[currentWordIndex]}</ColorPurple>
         </TitleSecondary>
         <Description>
-          Sou uma estudante de programação e atualmente estou cursando o segundo
-          período de Análise e Desenvolvimento de Sistemas EAD na Estácio.
-          Recentemente, concluí o curso de Desenvolvedor Web Full Stack na
-          Resilia, em parceria com o SENAC, por meio da iniciativa dos
-          Programadores Cariocas. Durante minha jornada de aprendizado, adquiri
-          habilidades em diversas tecnologias, incluindo HTML, CSS, JavaScript,
-          ReactJS, NodeJS, SQL e metodologias ágeis. Tenho experiência
-          profissional na EJCM Consultoria, empresa júnior de tecnologia da
-          UFRJ, onde desenvolvi aplicativos utilizando Typescript, React Native,
-          Styled Components, Figma, Git, Github e sites utilizando React e
-          Wordpress. Além disso, atuo como monitora do curso que me formei,
-          ajudando alunos a ingressarem no mercado de trabalho e busco
-          constantemente estudar novas tecnologias relevantes para a área.
+          
+Sou uma estudante de programação e estagiária iOS na Globo, atualmente estou cursando Análise e Desenvolvimento de Sistemas EAD na Estácio. Concluí com sucesso o curso de Desenvolvedor Web Full Stack na Resilia, em parceria com o SENAC, através da iniciativa dos Programadores Cariocas.
+
+Durante minha jornada de aprendizado, adquiri habilidades abrangentes em diversas tecnologias, incluindo HTML, CSS, JavaScript, ReactJS, NodeJS, SQL e metodologias ágeis. Atualmente, meu foco principal está no desenvolvimento de aplicativos utilizando Swift.
+
+Trago também experiência profissional da minha atuação na EJCM Consultoria, empresa júnior de tecnologia da UFRJ. Lá, tive a oportunidade de desenvolver aplicativos utilizando Typescript, React Native, Styled Components, além de trabalhar com ferramentas como Figma, Git e Github. Também desenvolvi sites utilizando React e Wordpress.
+
+Além das minhas atividades profissionais, contribuí como monitora no curso em que me formei, auxiliando alunos a se prepararem para ingressar no mercado de trabalho. Estou constantemente buscando aprimorar meus conhecimentos e acompanhar as últimas tendências e tecnologias relevantes para a área de desenvolvimento.
         </Description>
         <SocialIcons />
       </TextPrincipal>

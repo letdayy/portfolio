@@ -93,8 +93,6 @@ export default function Habilities() {
             </Text>
           </ContainerHabilities>
         </Containers>
-        <TertiaryTitle>Nível de Domínio</TertiaryTitle>
-        <HabilitiesImage />
       </Section>
     </ThemeProvider>
   );
